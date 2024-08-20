@@ -9,10 +9,10 @@ pkgs.stdenv.mkDerivation {
   ];
   buildPhase = ''
     mkdir -p .cache/latex
-    latexmk -interaction=nonstopmode -auxdir=.cache/latex -pdf main.tex
+    latexmk -interaction=nonstopmode -auxdir=.cache/latex -pdf template.tex
   '';
   installPhase = ''
     mkdir -p $out
-    cp main.pdf $out
+    cp template.pdf $out
   '';
 }
