@@ -30,6 +30,5 @@
         description = "zig build and tools";
       };
     };
-    formatter = inputs.treefmt-nix.lib.all-modules;
   };
 }
