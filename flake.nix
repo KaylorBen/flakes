@@ -1,8 +1,9 @@
 {
   description = "Nix flake templates and devshells";
 
-  outputs = { self }: {
+  inputs.treefmt-nix.url = "github:numtide/treefmt-nix";
 
+  outputs = inputs: {
     templates = {
       rust = {
         path = ./rust;
@@ -29,5 +30,6 @@
         description = "zig build and tools";
       };
     };
+    formatter = inputs.treefmt-nix.lib.all-modules;
   };
 }

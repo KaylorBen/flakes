@@ -11,8 +11,7 @@
       in {
         devShells.default = pkgs.mkShell {
           nativeBuildInputs = [ pkgs.bashInteractive ];
-          buildInputs = with pkgs;
-            [
+          buildInputs = with pkgs; [
               # Defines a python + set of packages.
               (python3.withPackages (ps:
                 with ps;
