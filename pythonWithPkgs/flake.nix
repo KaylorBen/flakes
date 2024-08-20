@@ -24,6 +24,8 @@
                   # pandas
                   # numpy
                   # matplotlib
+
+                  # ( opencv4.override { enableGtk2 = true; } ) # Override example
                 ]))
             ];
 
